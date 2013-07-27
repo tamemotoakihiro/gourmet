@@ -52,3 +52,5 @@ gem 'omniauth-facebook'
 group :development do
   gem 'pry-remote'
 end
+
+gem 'dotenv'
