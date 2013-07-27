@@ -48,3 +48,7 @@ gem 'slim-rails'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+group :development do
+  gem 'pry-remote'
+end
