@@ -35,9 +35,6 @@ gem 'less-rails', '~> 2.3.3'
 # Use Twitter Bootstrap
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-# Use SLIM for markup
-gem 'slim-rails', '~> 2.0.1'
-
 gem 'omniauth'
 gem 'omniauth-facebook'
 
