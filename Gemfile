@@ -6,9 +6,6 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -16,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,17 +29,23 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# Use LESS for markup
+gem 'less-rails', '~> 2.3.3'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Use Twitter Bootstrap
+gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+# Use SLIM for markup
+gem 'slim-rails', '~> 2.0.1'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'omniauth'
+gem 'omniauth-facebook'
 
-gem 'slim-rails'
+gem 'settingslogic'
 
+gem 'dotenv'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.14.0.rc1'
+  gem 'factory_girl_rails', '~> 4.0.0'
+end
