@@ -46,3 +46,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.14.0.rc1'
   gem 'factory_girl_rails', '~> 4.0.0'
 end
+
+group :development do
+  gem 'pry-rails'
+  gem 'awesome_print'
+end
