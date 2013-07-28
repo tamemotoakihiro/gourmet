@@ -1,0 +1,23 @@
+<% @reviews.each do |review| %>
+  <section class="container">
+    <div class="user">
+      <img src="http://lorempixel.com/80/80/people" alt="username" class="username" width="40" height="40">
+      <%= review.author.name %>
+    </div><!-- user -->
+
+    <div class="item">
+      <img src="http://lorempixel.com/300/200/food" alt="shopnameの写真" class="itemUserPhoto">
+      <p class="itemShopName lead"><a href="detail.html"><%= review.shop.name %></a></p>
+      <p class="itemUserReview"><%= review.content %></p>
+      <ul class="actionFooter unstyled">
+        <li><a href="wantToGo" class="btn btn-primary btn-large btn-block">行きたい!</a></li>
+        <li><a href="comment" class="btn btn-primary btn-large btn-block">コメント</a></li>
+      </ul>
+    </div><!-- item -->
+    <div class="readMore">
+      <p><a href="readMore" class="btn btn-warning btn-large btn-block">もっと読む</a></p>
+    </div>
+  </section>
+  <!-- /.container -->
+<% end %>
+<%= link_to 'New Review', new_review_path %>
