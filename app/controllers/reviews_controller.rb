@@ -26,9 +26,8 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params).tap do |r|
-      r.author = User.all.sample
+      r.author = current_user
     end
-    
 
     respond_to do |format|
       if @review.save

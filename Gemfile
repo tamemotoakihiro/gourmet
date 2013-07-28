@@ -52,4 +52,5 @@ group :development do
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'pry-remote'
+  gem 'rails-footnotes'
 end
