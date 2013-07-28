@@ -1,23 +1,21 @@
-<form>
-  <input type="text" placeholder="高円寺" class="span1">
-  <input type="text" placeholder="イタリアン" class="span1">
-  <button type="submit" class="btn btn-warning btn-large btn-block">Search</button>
-</form>
-
 <% @reviews.each do |review| %>
   <section class="container">
     <div class="user">
-      <img src="http://lorempixel.com/80/80/people" alt="username" class="username" width="40" height="40">
+      <img src="http://lorempixel.com/80/80/people" alt="<%= review.author.name %>" class="username" width="40" height="40">
       <%= review.author.name %>
     </div><!-- user -->
 
     <div class="item">
-      <img src="http://lorempixel.com/300/200/food" alt="shopnameの写真" class="itemUserPhoto">
+      <img src="http://lorempixel.com/300/200/food" alt="<%= review.shop.name %>の写真" class="itemUserPhoto">
       <p class="itemShopName lead"><a href="detail.html"><%= review.shop.name %></a></p>
       <p class="itemUserReview"><%= review.content %></p>
       <ul class="actionFooter unstyled">
         <li><a href="wantToGo" class="btn btn-primary btn-large btn-block">行きたい!</a></li>
-        <li><a href="comment" class="btn btn-primary btn-large btn-block">コメント</a></li>
+        <li><button class="btn btn-info" data-toggle="collapse" data-target="#commentArea"><i class="icon-comment icon-white"></i> コメント</button></li>
+        <div id="commentArea" class="commentArea collapse out">
+        <textarea></textarea>
+        <buttom class="btn btn-primary btn-large btn-block">投稿する</buttom>
+        </div><!-- collapse -->
       </ul>
     </div><!-- item -->
     <div class="readMore">
