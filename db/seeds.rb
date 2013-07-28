@@ -1,7 +1,7 @@
 User.delete_all
 User.create([
-  {name: '狩りガール' , mail: 'kari_girl@mango_goten.com' , description: '狩りガール'} ,
-  {name: 'カリタロー' , mail: 'kari_taro@chinsuko.com'    , description: 'カリタロー'} ,
+  {name: '狩りガール' , mail: 'kari_girl@mango_goten.com' , description: '狩りガール', provider: 'developer'} ,
+  {name: 'カリタロー' , mail: 'kari_taro@chinsuko.com'    , description: 'カリタロー', provider: 'developer'} ,
 ])
 
 Shop.delete_all

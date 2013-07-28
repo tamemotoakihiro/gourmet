@@ -37,6 +37,7 @@ gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-identity'
 
 gem 'settingslogic'
 
