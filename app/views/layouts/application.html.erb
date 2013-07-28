@@ -44,16 +44,21 @@
         <% else %>
           <%= link_to 'Facebookでログイン', '/auth/facebook', class: %w(login btn btn-primary) %>
         <% end %>
+        <!-- 投稿ボタン -->
         <form action="">
-          <p class="post"><a href="#" class="btn btn-large btn-block">投稿する</a></p>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <input type="file">
+          <button type="button" class="btn btn-large btn-block" data-toggle="collapse" data-target="#post">投稿する</button>
+
+          <div id="post" class="collapse out">
+            <textarea></textarea>
+            <input type="file">
+          </div><!-- collapse -->
         </form>
-        <hr>      
-        <form>
-            <input type="text" placeholder="高円寺" class="span4">
-            <input type="text" placeholder="イタリアン" class="span5">
-            <button type="submit" class="span3 btn btn-warning btn-large btn-block">Search</button>
+        <hr>    
+        <!-- 検索 -->     
+        <form class="form-inline">
+          <input type="text" class="input-small" placeholder="高円寺"> <input type="text" class="input-medium" placeholder="イタリアン">
+          <button type="submit" class="btn btn-warning">Search</button>
+          <p class="result">高円寺 × イタリアン<small>の検索結果<small></p>
         </form>
       </div><!-- /.container -->
     </header>
