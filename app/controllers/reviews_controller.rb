@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :member_only
 
   # GET /reviews
   # GET /reviews.json
@@ -68,6 +69,9 @@ class ReviewsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
+    end
+    def member_only
+      redirect_to '/auth/facebook' unless logged_in?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
