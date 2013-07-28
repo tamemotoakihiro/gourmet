@@ -1,12 +1,14 @@
 Gourmet::Application.routes.draw do
+  root "top#show"
+
   controller :sessions do
     get '/auth/:provider/callback' => :create
     get '/logout' => :destroy, as: :logout
+    get '/auth/failure' => :failure
   end
 
   resources :reviews
   resources :shops
-  root 'reviews#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

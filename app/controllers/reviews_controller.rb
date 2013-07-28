@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.latest
   end
 
   # GET /reviews/1
@@ -71,7 +71,7 @@ class ReviewsController < ApplicationController
       @review = Review.find(params[:id])
     end
     def member_only
-      redirect_to '/auth/facebook' unless logged_in?
+      redirect_to root_path unless logged_in?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

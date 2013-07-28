@@ -39,27 +39,19 @@
       <div class="container">
         <div class="dish"><img src="img/dish.png" width="180" alt=""></div>
         <h1><img src="img/logo_guruguru.png" width="100" alt=""></h1>
-        <%# <a href="logout" class="logout btn btn-primary">ログアウト</a> %>
         <% if logged_in? %>
-          <%= current_user.name %>
-          <%= link_to 'logout', :logout %>
+          <%= link_to 'ログアウト', :logout, class: %w(logout btn btn-primary) %>
         <% else %>
-          <%= link_to 'login', '/auth/facebook' %>
+          <%= link_to 'Facebookでログイン', '/auth/facebook', class: %w(login btn btn-primary) %>
         <% end %>
       </div><!-- /.container -->
     </header>
-
-    <form>
-      <input type="text" placeholder="高円寺" class="span1">
-      <input type="text" placeholder="イタリアン" class="span1">
-      <button type="submit" class="btn btn-warning btn-large btn-block">Search</button>
-    </form>
 
     <%= yield %>
 
     <footer>
       <div class="container">
-        &copy <a href="http://kokemusazu.com">こけむさズ</a> All rights reserved
+        &amp;copy <a href="http://kokemusazu.com">こけむさズ</a> All rights reserved
       </div><!-- /.container -->
     </footer>
 

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+    <link href="/assets/application.css" rel="stylesheet" media="screen">
+	<title>Guru^2(グルグル) | グループで楽しむグルメレビュー</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="dish"><img src="img/dish.png" width="180" alt=""></div>
+			<h1><img src="img/logo_guruguru.png" width="100" alt=""></h1>
+			<a href="logout" class="logout btn btn-primary">ログアウト</a>
+		</div><!-- /.container -->
+	</header>
+
+	<section class="container">
+		<form>
+		    <input type="text" placeholder="高円寺" class="span1">
+		    <input type="text" placeholder="イタリアン" class="span1">
+		    <button type="submit" class="btn btn-warning btn-large btn-block">Search</button>
+		</form>
+		
+		<div class="user">
+			<img src="http://lorempixel.com/80/80/people" alt="username" class="username" width="40" height="40">
+		</div><!-- user -->
+		
+		<div class="item">
+			<img src="http://lorempixel.com/300/200/food" alt="shopnameの写真" class="itemUserPhoto">
+			<p class="itemShopName lead"><a href="detail.html">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</a></p>
+			<p class="itemUserReview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<ul class="actionFooter unstyled">
+				<li><a href="wantToGo" class="btn btn-primary btn-large btn-block">行きたい!</a></li>
+				<li><a href="comment" class="btn btn-primary btn-large btn-block">コメント</a></li>
+			</ul>
+		</div><!-- item -->
+		<div class="readMore">
+			<p><a href="readMore" class="btn btn-warning btn-large btn-block">もっと読む</a></p>
+		</div>
+	</section>
+	<!-- /.container -->
+
+	<footer>
+		<div class="container">
+			&copy <a href="http://kokemusazu.com">こけむさズ</a> All rights reserved
+		</div><!-- /.container -->
+	</footer>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

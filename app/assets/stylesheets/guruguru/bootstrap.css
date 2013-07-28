@@ -5256,7 +5256,7 @@ header h1 {
   position: absolute;
   top: 0;
 }
-header .logout {
+header .logout, header .login {
   position: absolute;
   top: 20px;
   right: 20px;
