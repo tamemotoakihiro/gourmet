@@ -44,6 +44,17 @@
         <% else %>
           <%= link_to 'Facebookでログイン', '/auth/facebook', class: %w(login btn btn-primary) %>
         <% end %>
+        <form action="">
+          <p class="post"><a href="#" class="btn btn-large btn-block">投稿する</a></p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <input type="file">
+        </form>
+        <hr>      
+        <form>
+            <input type="text" placeholder="高円寺" class="span4">
+            <input type="text" placeholder="イタリアン" class="span5">
+            <button type="submit" class="span3 btn btn-warning btn-large btn-block">Search</button>
+        </form>
       </div><!-- /.container -->
     </header>
 
