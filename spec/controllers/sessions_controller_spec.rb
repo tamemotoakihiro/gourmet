@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SessionController do
+describe SessionsController do
 
   describe "GET 'create'" do
     it "returns http success" do
@@ -9,9 +9,9 @@ describe SessionController do
     end
   end
 
-  describe "GET 'destroy'" do
+  describe "GET 'destory'" do
     it "returns http success" do
-      get 'destroy'
+      get 'destory'
       response.should be_success
     end
   end

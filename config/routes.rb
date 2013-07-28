@@ -1,6 +1,12 @@
 Gourmet::Application.routes.draw do
-  get "session/create"
-  get "session/destroy"
+  get "sessions/create"
+  get "sessions/destory"
+  controller :sessions do
+    get '/auth/:provider/callback' => :create
+    get '/logout' => :destroy, as: :logout
+  end
+
+  post '/auth/developer/callback', to: 'sessions#create' if Rails.env.development?
   resources :reviews
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -42,7 +48,7 @@ Gourmet::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
